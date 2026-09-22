@@ -1,3 +1,7 @@
+## To use Google Colab: 
+you only need a standard Google account. If you already have a Gmail address or use any other Google service, you are ready to go.
+
+
 ## Simple steps to access and set up your environment:
 
 ## 1) Log In to Google Colab

@@ -15,8 +15,8 @@ from scipy.stats import poisson,binom,expon
 import matplotlib.pyplot as plt
 import math
 
-"""*   prendiamo il flusso totale al livello del mare al di sopra di 10 GeV ([CR Flux](https://www.diva-portal.org/smash/get/diva2:1597287/FULLTEXT01.pdf)) - il flusso integrale è ordine di 10-3 [cm-2 s-1 sr-1]: I_0=0.001
-*   il flusso va integrato nell'angolo di zenith per i muoni!
+"""*   Prendiamo il flusso totale al livello del mare al di sopra di 10 GeV ([CR Flux](https://www.diva-portal.org/smash/get/diva2:1597287/FULLTEXT01.pdf)) - il flusso integrale è ordine di 10-3 [cm-2 s-1 sr-1]: I_0=0.001
+*   Il flusso va integrato nell'angolo di zenith per i muoni!
 *   Per ora consideriamo un angolo solido totale (2 pigreco, ma ci torneremo...)
 *   consideriamo un rivelatore a dimensione variabile, per esempio un quadrato di lato l ==> l = 10 cm
 
@@ -34,17 +34,16 @@ muon_rate=I_0*omega*t_data*area
 
 print(" il rate di muoni in "+str(hours)+" ore è: "+str(muon_rate))
 
-"""Al di sopra di 10 GeV i muoni cosmici hanno una disctirbuzione in energia che è un esponenziale decrescente
-==> per semplicità consideriamo un esponenziale decrescente con "vita media" 50 GeV  
+"""**Al di sopra di 10 GeV i muoni cosmici hanno una disctirbuzione in energia che è un esponenziale decrescente
+==> per semplicità consideriamo un esponenziale decrescente con "vita media" 50 GeV ==> e1 = expon(scale=50,loc=10)**
 
-** e1 = expon(scale=50,loc=10)  
 *   scale è l'equivalente di 'tau', la vita media,
 *   loc è il punto di partenza ==> 10 GeV
 """
 
 e1 = expon(scale=50,loc=10)
 
-"""generiamo ad esempio il numero di muoni cosmici previsto sopra (rvs-Random variates: rvs(loc=0, scale=1, size=1, random_state=None) )"""
+"""**Generiamo ad esempio il numero di muoni cosmici previsto sopra (rvs-Random variates: rvs(loc=0, scale=1, size=1, random_state=None) )**"""
 
 energies = e1.rvs(size=int(muon_rate))
 print(energies)

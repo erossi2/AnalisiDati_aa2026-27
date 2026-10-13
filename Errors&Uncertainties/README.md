@@ -1,1 +1,1 @@
-**In this unit you can find: simple exercise and python codes to practise with uncertainties and error propagation**
+**This unit provides introductory exercises and Python code for practising the estimation of uncertainties and the propagation of errors.**

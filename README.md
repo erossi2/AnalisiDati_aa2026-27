@@ -8,10 +8,9 @@ The page will be modified and evolve as we progress with the lectures.
 
 1) Introduction&Settings: instructions for installing the main components for work: git, python, pip, jupyter, root and Basic computer science concepts&exercie (filesystem, terminal, compiled and interpreted programming languages)
 2) Distribution & PDF: simples exercise to practice with probability and distributions
-3) LikelihoodTests
-4) OtherTests
-5) Uncertainties
-6) ConfidenceLimits
-7) HypothesisTest
-8) MonteCarlo
-9) MachineLearning
+3) Uncertainties
+4) Likelihood $\chi^2$ and Other Tests
+5) ConfidenceLimits
+6) HypothesisTest
+7) MonteCarlo
+8) MachineLearning

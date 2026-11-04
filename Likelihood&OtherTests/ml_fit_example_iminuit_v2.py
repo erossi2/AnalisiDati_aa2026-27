@@ -9,7 +9,7 @@ Original file is located at
 # Unbinned maximum-likelihood fit with `iminuit`
 
 This notebook develops an unbinned maximum-likelihood fit step by step. We fit the distribution of
-$\(x=\cos\theta\)$ with the two-parameter probability density
+$x=\cos\theta$ with the two-parameter probability density
 
 $f(x\mid a,b)=\frac{1+a x+b x^2}{I(a,b)},\qquad x_{\min}\leq x\leq x_{\max}$
 
@@ -42,7 +42,7 @@ print("iminuit:", iminuit.__version__)
 The original example uses a text file hosted by Heidelberg University, but in git you can find it. If the download is unavailable,
 the cell creates a reproducible toy sample so that the rest of the notebook can still be run.
 
-The fit range is fixed to \([-0.95,0.95]\), as in the original example.
+The fit range is fixed to $[-0.95,0.95]$, as in the original example.
 """
 
 XMIN, XMAX = -0.95, 0.95
@@ -107,15 +107,13 @@ plt.show()
 
 """## 3. Define the normalized probability density
 
-The unnormalized shape is \(g(x;a,b)=1+ax+bx^2\). Its integral over the fit range is
+The unnormalized shape is $g(x;a,b)=1+ax+bx^2$. Its integral over the fit range is
 
-\[
-I(a,b)=(x_{\max}-x_{\min})
+$I(a,b)=(x_{\max}-x_{\min})
 +a\frac{x_{\max}^2-x_{\min}^2}{2}
-+b\frac{x_{\max}^3-x_{\min}^3}{3}.
-\]
++b\frac{x_{\max}^3-x_{\min}^3}{3}$.
 
-Therefore \(f=g/I\) integrates to one over the fit range.
+Therefore $f=g/I$ integrates to one over the fit range.
 
 A valid probability density must be non-negative throughout the fit range. The function below returns
 `NaN` if a proposed parameter point is invalid; the objective function will then reject that point.
